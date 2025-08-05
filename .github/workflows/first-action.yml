@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
       - name: make the directory
         run: mkdir logs
       - name: add the file inside the directory
