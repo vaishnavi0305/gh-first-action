@@ -7,10 +7,9 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4
       - name: make the directory
-        run: mkdir logs
+        run: mkdir logs && cd logs
       - name: add the file inside the directory
         run: |
-          cd logs
-          echo "Hello Dear" >> test.txt
-      - name: read the file
-        run: cat test.txt
+          touch test.txt
+          echo "Hello!!!" > test.txt
+          cat test.txt
