@@ -1,0 +1,16 @@
+name: First-workflow
+on: workflow_dispatch
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: action/checkout@v4
+      - name: make the directory
+        run: mkdir logs
+      - name: add the file inside the directory
+        run: |
+          cd logs
+          echo "Hello Dear" >> test.txt
+      - name: read the file
+        run: cat test.txt
